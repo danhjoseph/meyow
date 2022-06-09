@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Buttons.css";
 import ReplayIcon from "@mui/icons-material/Replay";
 import CloseIcon from "@mui/icons-material/Close";
@@ -8,9 +8,12 @@ import FlashOnIcon from "@mui/icons-material/FlashOn";
 import IconButton from "@mui/material/IconButton";
 
 function Buttons() {
+  const reload = () => {
+    window.location.reload();
+  };
   return (
     <div className="buttons">
-      <IconButton className="refresh">
+      <IconButton className="refresh" onClick={reload}>
         <ReplayIcon fontsize="large" />
       </IconButton>
       <IconButton className="close">
