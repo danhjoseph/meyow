@@ -1,18 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header.js";
+import Info from "./Pages/Info";
 import Cards from "./Components/Cards.js";
 import Buttons from "./Components/Buttons";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
         <Routes>
-          <Route path="/info"></Route>
-          <Route path="/" element={<><Cards /><Buttons /></>}/>
+          <Route exact path="/info" element={<><Header backButton="/" /><Info/></>}/>
+          <Route exact path="/" element={<><Header/><Cards/><Buttons/></>}/>
         </Routes>
       </Router>
     </div>
