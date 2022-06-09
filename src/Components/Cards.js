@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import db from "../Database/Firebase.js";
 import TinderCard from "react-tinder-card";
 import "./Cards.css";
 
 function Cards() {
   const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    db.collection("pets").onSnapshot((snapshot) =>
+      setPets(snapshot.docs.map((doc) => doc.data()))
+    );
+  }, []);
 
   return (
     <div>
@@ -15,7 +22,7 @@ function Cards() {
             preventSwipe={["up", "down"]}
           >
             <div
-              style={{ backgroundImage: `url(${pet.img})` }}
+              style={{ backgroundImage: `url(${pet.url})` }}
               className="card"
             >
               <h3>{pet.name}</h3>
