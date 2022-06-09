@@ -7,9 +7,14 @@ function Cards() {
   const [pets, setPets] = useState([]);
 
   useEffect(() => {
-    db.collection("pets").onSnapshot((snapshot) =>
-      setPets(snapshot.docs.map((doc) => doc.data()))
-    );
+    const unsubscribe = db
+      .collection("pets")
+      .onSnapshot((snapshot) =>
+        setPets(snapshot.docs.map((doc) => doc.data()))
+      );
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (
