@@ -17,7 +17,7 @@ A Tinder clone for cats!
 - HTML/CSS
 - React.js
 - Node.js
-- Firebase
+- Firestore
 
 ## Acknowledgements
 
