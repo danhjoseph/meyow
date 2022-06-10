@@ -4,7 +4,7 @@ import { liked } from "./Cards";
 import ClearIcon from "@mui/icons-material/Clear";
 
 function Liked() {
-  const [rmv, setRemove] = useState([]);
+  const [foo, setRemove] = useState([]);
 
   const remove = (index) => {
     liked.splice(index, 1);
