@@ -7,7 +7,7 @@ function Info() {
       <div className="info">
         <p>Made with React, Node.js, &amp; Firebase</p>
         <br />
-        <a href="github.com/danhjoseph">github.com/danhjoseph</a>
+        <a href="https://github.com/danhjoseph">github.com/danhjoseph</a>
         <br />
         <br />
         <p>2022</p>

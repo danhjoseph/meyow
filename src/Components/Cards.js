@@ -3,6 +3,7 @@ import db from "../Database/Firebase.js";
 import TinderCard from "react-tinder-card";
 import "./Cards.css";
 
+export const liked = [];
 function Cards() {
   const [pets, setPets] = useState([]);
 
@@ -17,6 +18,12 @@ function Cards() {
     };
   }, []);
 
+  const like = (direction, name, url) => {
+    if (direction === "right") {
+      liked.push({ name, url });
+    }
+  };
+
   return (
     <div>
       <div className="container">
@@ -25,6 +32,7 @@ function Cards() {
             className="swipe"
             key={pet.name}
             preventSwipe={["up", "down"]}
+            onSwipe={(dir) => like(dir, pet.name, pet.url)}
           >
             <div
               style={{ backgroundImage: `url(${pet.url})` }}
