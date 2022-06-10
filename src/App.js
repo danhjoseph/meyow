@@ -27,7 +27,7 @@ function App() {
             path="/liked"
             element={
               <>
-                <Header />
+                <Header backButton="/" />
                 <Liked />
               </>
             }
