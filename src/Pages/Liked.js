@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Liked.css";
-import { liked } from "./Cards";
+import { liked } from "../Components/Cards";
 import ClearIcon from "@mui/icons-material/Clear";
 
 function Liked() {

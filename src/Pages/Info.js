@@ -5,7 +5,7 @@ function Info() {
   return (
     <div className="about">
       <div className="info">
-        <p>Made with React, Node.js, &amp; Firebase</p>
+        <p>Built with React, Node.js, &amp; Firebase</p>
         <br />
         <a href="https://github.com/danhjoseph">github.com/danhjoseph</a>
         <br />

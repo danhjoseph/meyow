@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header.js";
 import Info from "./Pages/Info";
-import Liked from "./Components/Liked.js";
+import Liked from "./Pages/Liked.js";
 import Cards from "./Components/Cards.js";
 import Buttons from "./Components/Buttons";
 
