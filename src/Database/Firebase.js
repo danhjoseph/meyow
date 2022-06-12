@@ -1,13 +1,14 @@
 import firebase from "firebase";
+import "dotenv/config";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8rGUGZsyNd_5L_kUlnNNgbRMS-B3xFew",
-  authDomain: "meyow-7f1bb.firebaseapp.com",
-  projectId: "meyow-7f1bb",
-  storageBucket: "meyow-7f1bb.appspot.com",
-  messagingSenderId: "471028695555",
-  appId: "1:471028695555:web:c278c2e892d49dc6fa0436",
-  measurementId: "G-MKDH3HW8CZ",
+  apiKey: process.env.APIKEY,
+  authDomain: process.env.AUTHDOMAIN,
+  projectId: process.env.PROJECTID,
+  storageBucket: process.env.STORAGEBUCKET,
+  messagingSenderId: process.env.MESSAGINGSENDERID,
+  appId: process.env.APPID,
+  measurementId: process.env.MEASUREMENTID,
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

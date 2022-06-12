@@ -15,11 +15,11 @@ A Tinder clone for cats!
 
 - Javascript
 - HTML/CSS
-- React.js
-- Node.js
-- Firestore
+- [React.js](https://github.com/reactjs)
+- [Node.js](https://github.com/nodejs)
+- [Firestore](https://github.com/firebase)
 
 ## Acknowledgements
 
-- Material UI Icons
-- react-tinder-card
+- [Material UI Icons](https://github.com/mui)
+- [react-tinder-card](https://github.com/3DJakob/react-tinder-card)
